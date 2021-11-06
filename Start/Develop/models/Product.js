@@ -26,6 +26,7 @@ class Product extends Model {}
 
 // set up fields and rules for Product model
     // define columns
+    // define PK and FK 
 Product.init(
   {
     // define an id column
