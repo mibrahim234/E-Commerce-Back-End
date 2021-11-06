@@ -3,22 +3,11 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class ProductTag extends Model {}
-// * `ProductTag`
-
-//   * `id`
-//     * Integer
-//     * Doesn't allow null values
-//     * Set as primary key
-//     * Uses auto increment
-
-//   * `product_id`
-//     * Integer
-//     * References the `product` model's `id`
-
-//   * `tag_id`
-//     * Integer
-//     * References the `tag` model's `id`
-
+// CREATE TABLE ProductTag (
+// id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+// product_id INTEGER FOREIGN KEY references product(id)
+// 
+//  )
     // define columns
 ProductTag.init(
   {
@@ -32,8 +21,7 @@ ProductTag.init(
       primaryKey: true,
       // turn on auto increment
       autoIncrement: true
-    }
-  },
+    },
   product_id: {
     type: DataTypes.INTEGER,
     references: {
@@ -48,6 +36,7 @@ ProductTag.init(
       key: 'id'
     }
   },
+},
   {
     sequelize,
     timestamps: false,

@@ -3,10 +3,16 @@ const seedProducts = require('./product-seeds');
 const seedTags = require('./tag-seeds');
 const seedProductTags = require('./product-tag-seeds');
 
+// seeds are initial data, data you want your database to start with
+
 const sequelize = require('../config/connection');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
+  // goes into models and create tables 
+  // force true: drops tables and recreates them 
+  // force false: does not drop 
+  //sync method only for development environments 
   console.log('\n----- DATABASE SYNCED -----\n');
   await seedCategories();
   console.log('\n----- CATEGORIES SEEDED -----\n');

@@ -30,12 +30,13 @@ Category.init(
       // turn on auto increment
       autoIncrement: true
     },
-    category_text: {
+    category_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
   },
   {
+    // settings/options for above code 
     sequelize,
     timestamps: false,
     freezeTableName: true,
