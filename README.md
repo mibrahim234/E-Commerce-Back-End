@@ -44,18 +44,11 @@ Fill out the unfinished routes in `product-routes.js`, `tag-routes.js`, and `cat
 
 After creating the models and routes, run `npm run seed` to seed data to your database so that you can test your routes.
 
-### Sync Sequelize to the Database on Server Start
-
-Create the code needed in `server.js` to sync the Sequelize models to the MySQL database on server start.
-
 
 ## Review
-
 You are required to submit BOTH of the following for review:
 
 * A walkthrough video demonstrating the functionality of the application and all of the acceptance criteria being met.
 
 * The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
 
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
