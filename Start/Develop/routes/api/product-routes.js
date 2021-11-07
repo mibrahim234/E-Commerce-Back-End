@@ -2,25 +2,24 @@ const router = require('express').Router();
 const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // The `/api/products` endpoint
-
 // get all products
 // find all products
 // be sure to include its associated Category and Tag data
+
+/// get all products
 router.get('/', async (req, res) => {
+  // find all products
+  // be sure to include its associated Category and Tag data
   try {
     const productData = await Product.findAll({
       include: [
-        {
-          model: Category,
-          as: 'category',
-        },
-        {
-          model: Tag,
-          through: ProductTag,
-          as: 'tags',
-        },
-      ],
+        {model: Category,
+           as: "category"},
+        {model: Tag,
+           as: "tags"}
+      ]
     });
+
     res.status(200).json(productData);
   } catch (err) {
     res.status(500).json(err);
@@ -145,7 +144,7 @@ router.delete('/:id', (req, res) => {
       res.status(404).json({ message: 'No user found with this id' });
       return;
       }
-  res.json(dbUserData);
+  res.json(productData);
 })
 .catch(err => {
 console.log(err);
