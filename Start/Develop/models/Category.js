@@ -1,16 +1,4 @@
 const { Model, DataTypes } = require('sequelize');
-// `Category`
-
-// * `id`
-//   * Integer
-//   * Doesn't allow null values
-//   * Set as primary key
-//   * Uses auto increment
-
-// * `category_name`
-//   * String
-//   * Doesn't allow null values
-
 
 const sequelize = require('../config/connection.js');
 
