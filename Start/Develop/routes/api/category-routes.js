@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category, Product } = require('../../models');
+const { Category, Product, Tag, ProductTag } = require('../../models');
 // whenever we require a folder, it looks for the index 
 
 // The `/api/categories` endpoint
