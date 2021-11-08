@@ -75,22 +75,22 @@ router.post('/', async (req, res) => {
       if (req.body.tagIds.length) {
         const productTagIdArr = req.body.tagIds.map((tag_id) => {
           return {
-            product_id: product.id,
+            product_id: productData.id,
             tag_id,
           };
         });
-        return ProductTag.bulkCreate(productTagIdArr);
+      let productTagIds = await ProductTag.bulkCreate(productTagIdArr);
+      res.status(200).json(productTagIds);
+      } else {
+              // if no product tags, just respond
+        res.status(200).json(productData);
       }
-      // if no product tags, just respond
-      res.status(200).json(product);
-    })
-    .then((productTagIds) => res.status(200).json(productTagIds))
-    .catch((err) => {
+    } catch (err) {
       console.log(err);
       res.status(400).json(err);
-    });
-});
-
+    }
+  });
+   
 // update product
 router.put('/:id', (req, res) => {
   // update product data
@@ -132,6 +132,8 @@ router.put('/:id', (req, res) => {
       res.status(400).json(err);
     });
 });
+
+  
 
 // delete on tag by its `id` value
 router.delete('/:id', async (req, res) => {
