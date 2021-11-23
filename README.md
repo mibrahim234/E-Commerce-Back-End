@@ -34,6 +34,30 @@ After creating the models and routes, run `npm run seed` to seed data to your da
 ## Start Server
 npm start or node server.js 
 
+## Mock-Up
+
+The following animations show examples of the application's API routes being tested in Insomnia Core.
+
+The first animation shows GET routes to return all categories, all products, and all tags being tested in Insomnia Core:
+
+![In Insomnia Core, the user tests “GET tags,” “GET Categories,” and “GET All Products.”.](./Assets/13-orm-homework-demo-01.gif)
+
+The second animation shows GET routes to return a single category, a single product, and a single tag being tested in Insomnia Core:
+
+![In Insomnia Core, the user tests “GET tag by id,” “GET Category by ID,” and “GET One Product.”](./Assets/13-orm-homework-demo-02.gif)
+
+The final animation shows the POST, PUT, and DELETE routes for categories being tested in Insomnia Core:
+
+![In Insomnia Core, the user tests “DELETE Category by ID,” “CREATE Category,” and “UPDATE Category.”](./Assets/13-orm-homework-demo-03.gif)
+
+Here are the links of me testing the product: 
+Get A single Product Route: https://drive.google.com/file/d/1qCGqAEsT1Iat3CG1ZvP0onmRcr_28a84/view
+
+Post-Put-Delete: https://drive.google.com/file/d/1nEZXGOp92uxqGgTX-Oq36uYeloozeT7z/view?usp=sharing
+
+Get All Product Route: https://drive.google.com/file/d/1gaqRmr8G5uMr0cBh_fRRYeKfn4KenSFt/view
+
+
 ## License
 Copyright (c) [2021]
 The license is MIT License. 
